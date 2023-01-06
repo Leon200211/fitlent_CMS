@@ -1,0 +1,16 @@
+{
+    "name": "auser/public_html",
+    "autoload": {
+        "psr-4": {
+            "engine\\": "engine",
+            "engine\\DI\\": "engine/DI"
+        }
+    },
+    "authors": [
+        {
+            "name": "Leon200211",
+            "email": "leon200207@yandex.ru"
+        }
+    ],
+    "require": {}
+}
