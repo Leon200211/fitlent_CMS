@@ -9,6 +9,13 @@ try{
     // Dependency injection
     $di = new DI();
 
+    $services = require __DIR__ . '/config/service.php';
+
+    foreach ($services as $service){
+        $provider = new $service($di);
+        $provider->init();
+    }
+
     $cms = new CMS($di);
     $cms->run();
 

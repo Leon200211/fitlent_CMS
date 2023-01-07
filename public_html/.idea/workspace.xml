@@ -7,8 +7,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
   </component>
   <component name="ProjectId" id="2Jx7CUXvtUYSgVZXNLTTYNEZcA0" />
   <component name="ProjectViewState">
@@ -19,6 +25,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -30,7 +37,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673007752844</updated>
-      <workItem from="1673007754093" duration="1972000" />
+      <workItem from="1673007754093" duration="2283000" />
+      <workItem from="1673015017213" duration="29000" />
+      <workItem from="1673107369211" duration="2472000" />
     </task>
     <servers />
   </component>
