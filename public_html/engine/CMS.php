@@ -10,6 +10,8 @@ class CMS
 {
     private $di;
 
+    public $db;
+
 
     public function __construct($di){
 
@@ -20,7 +22,9 @@ class CMS
 
     // метод запуска всей CMS
     public function run(){
-        echo 12;
+
+        print_r($this->di);
+
     }
 
 }

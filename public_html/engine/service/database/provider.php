@@ -7,7 +7,7 @@ use engine\service\AbstractProvider;
 use engine\core\database\Connection;
 
 
-class provider extends AbstractProvider
+class Provider extends AbstractProvider
 {
 
     public $serviceName = 'db';

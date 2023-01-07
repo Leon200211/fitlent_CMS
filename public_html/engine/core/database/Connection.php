@@ -21,10 +21,10 @@ class Connection
 
         //$config = require_once 'config.php';
         $config = [
-            'host' => '',
-            'db_name' => '',
-            'username' => '',
-            'password' => '',
+            'host' => '127.0.0.1:3307',
+            'db_name' => 'yandex',
+            'username' => 'root',
+            'password' => 'root',
             'charset' => 'utf8'
         ];
 
