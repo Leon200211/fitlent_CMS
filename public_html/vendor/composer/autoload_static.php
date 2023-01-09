@@ -12,6 +12,10 @@ class ComposerStaticInit3565c23a1d57106ccd6008b17282280c
             'engine\\DI\\' => 10,
             'engine\\' => 7,
         ),
+        'c' => 
+        array (
+            'cms\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -22,6 +26,10 @@ class ComposerStaticInit3565c23a1d57106ccd6008b17282280c
         'engine\\' => 
         array (
             0 => __DIR__ . '/../..' . '/engine',
+        ),
+        'cms\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/cms',
         ),
     );
 

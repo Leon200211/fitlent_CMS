@@ -3,6 +3,7 @@
 
 namespace engine;
 
+use engine\core\router\DispatchedRoute;
 use engine\helper\Common;
 
 // основной класс нашей CMS системы, который запускает всю логику работы
@@ -25,12 +26,33 @@ class CMS
     // метод запуска всей CMS
     public function run(){
 
-        $this->router->add('home', '/', 'HomeController:index');
-        $this->router->add('product', '/user/12', 'ProductController:index');
+        try{
 
-        $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
+            $this->router->add('home', '/', 'HomeController:index');
+            $this->router->add('news', '/news/(id:int)', 'HomeController:news');
 
-        var_dump($routerDispatch);
+
+            $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
+
+
+            // если не существует данного роута
+            if($routerDispatch === NULL){
+                $routerDispatch = new DispatchedRoute('ErrorController:page404');
+            }
+
+            list($class, $action) = explode(':', $routerDispatch->getController(), 2);
+            $controller = '\\cms\\controllers\\' . $class;
+            $parameters = $routerDispatch->getParameters();
+            call_user_func_array([new $controller($this->di), $action], $parameters);
+
+        }catch (\Exception $e){
+
+            echo $e->getMessage();
+            exit;
+
+        }
+
+
 
     }
 

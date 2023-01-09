@@ -3,14 +3,23 @@
 
 namespace engine;
 
+use \engine\DI\DI;
 
 // класс от которого наследуются все контроллеры
 abstract class Controller
 {
 
-    public function __construct($di){
+    /**
+     * @var \engine\DI\DI
+     */
+    protected $di;
 
+    protected $db;
+
+    public function __construct(DI $di){
+        $this->di = $di;
     }
+
 
 
 }

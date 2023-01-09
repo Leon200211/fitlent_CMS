@@ -22,7 +22,7 @@ class DispatchedRoute
     }
 
 
-    public function getParametres(){
+    public function getParameters(){
         return $this->parametres;
     }
 
