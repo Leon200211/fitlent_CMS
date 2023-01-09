@@ -48,6 +48,26 @@ class UrlDispatcher
             return new DispatchedRoute($routes[$uri]);
         }
 
+        return $this->doDispatch($method, $uri);
+
+    }
+
+
+    private function doDispatch($method, $uri){
+
+        foreach ($this->routes($method) as $route => $controller){
+            $pattern = '#^' . $route . '$#s';
+            if(preg_match($pattern, $uri, $parameters)){
+                return new DispatchedRoute($controller, $parameters);
+            }
+        }
+
+    }
+
+
+    // метод для регистрации роута
+    public function register($method, $pattern, $controller){
+        $this->routes[strtoupper($method)][$pattern] = $controller;
     }
 
 }

@@ -36,17 +36,23 @@ class Router
 
 
     public function dispatch($method, $uri){
-
+        return $this->getDispatcher()->dispatch($method, $uri);
     }
 
 
     public function getDispatcher(){
 
         if($this->dispatcher === NULL){
+            $this->dispatcher = new UrlDispatcher();
+
+            // регистрируем роуты
+            foreach ($this->routes as $route) {
+                $this->dispatcher->register($route['method'], $route['pattern'], $route['controller']);
+            }
 
         }
 
-        $this->dispatcher;
+        return $this->dispatcher;
 
     }
 
