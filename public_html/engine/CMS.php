@@ -28,9 +28,7 @@ class CMS
 
         try{
 
-            $this->router->add('home', '/', 'HomeController:index');
-            $this->router->add('news', '/news/(id:int)', 'HomeController:news');
-
+            require_once ROOT_DIR . '/cms/routes.php';
 
             $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
 
