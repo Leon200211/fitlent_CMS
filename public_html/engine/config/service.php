@@ -2,9 +2,10 @@
 
 
 return [
-    engine\service\database\provider::class,
-    engine\service\router\provider::class,
-    engine\service\view\provider::class,
+    engine\service\database\Provider::class,
+    engine\service\router\Provider::class,
+    engine\service\view\Provider::class,
+    engine\service\config\Provider::class,
 ];
 
 

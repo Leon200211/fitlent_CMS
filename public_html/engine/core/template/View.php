@@ -53,18 +53,18 @@ class View
     }
 
 
+    /**
+     * @param $template
+     * @param null $env
+     * @return string
+     */
     private function getTemplatePath($template, $env = null){
 
-        switch ($env){
-            case 'admin':
-                return ROOT_DIR . '/views/' . $template . '.php';
-                break;
-            case 'cms':
-                return ROOT_DIR . '/content/themes/default/' . $template . '.php';
-                break;
-            default:
-                return ROOT_DIR . '/' . $env . '/views/' . $template . '.php';
+        if($env == 'cms'){
+            return ROOT_DIR . '/content/themes/default/' . $template . '.php';
         }
+
+        return ROOT_DIR . '/views/' . $template . '.php';
 
     }
 
