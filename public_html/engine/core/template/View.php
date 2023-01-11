@@ -3,13 +3,17 @@
 
 namespace engine\core\template;
 
+use engine\core\template\Theme;
 
 // класс для работы с шаблонами
 class View
 {
 
-    public function __construct(){
+    protected $theme;
 
+
+    public function __construct(){
+        $this->theme = new Theme();
     }
 
 
@@ -25,6 +29,9 @@ class View
         if(!is_file($templatePath)){
             throw new \InvalidArgumentException(sprintf('Template "%s" not found in "%s"', $template, $templatePath));
         }
+
+
+        $this->theme->setData($vars);
 
         // создание переменных из массива
         extract($vars);
