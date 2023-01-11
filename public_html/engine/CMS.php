@@ -28,7 +28,13 @@ class CMS
 
         try{
 
-            require_once ROOT_DIR . '/cms/routes.php';
+            if(ENV !== 'cms'){
+                require_once ROOT_DIR . '/../' . ENV . '/routes.php';
+            }else{
+                require_once ROOT_DIR . '/' . ENV . '/routes.php';
+            }
+
+
 
             $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
 
@@ -39,7 +45,7 @@ class CMS
             }
 
             list($class, $action) = explode(':', $routerDispatch->getController(), 2);
-            $controller = '\\cms\\controllers\\' . $class;
+            $controller = '\\' . ENV . '\\controllers\\' . $class;
             $parameters = $routerDispatch->getParameters();
             call_user_func_array([new $controller($this->di), $action], $parameters);
 

@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/cms" isTestSource="false" packagePrefix="cms\" />
+      <sourceFolder url="file://$MODULE_DIR$/admin" isTestSource="false" packagePrefix="admin\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />

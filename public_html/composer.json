@@ -4,7 +4,8 @@
         "psr-4": {
             "engine\\": "engine",
             "engine\\DI\\": "engine/DI",
-            "cms\\": "cms"
+            "cms\\": "cms",
+            "admin\\": "admin"
         }
     },
     "authors": [
