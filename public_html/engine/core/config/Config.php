@@ -39,7 +39,7 @@ class Config
 
             $items = require_once $path;
 
-            if(is_array($items)){
+            if(!empty($items)){
                 return $items;
             }else{
                 throw new \Exception(

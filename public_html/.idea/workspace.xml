@@ -30,16 +30,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/engine/service/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/engine/service/request" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\engine\service\request" />
+      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\cms\config" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\engine\service\config" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\controllers" />
-      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\engine\service\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\assets" />
@@ -60,22 +61,12 @@
       <workItem from="1673162414256" duration="119000" />
       <workItem from="1673276701881" duration="7410000" />
       <workItem from="1673363919075" duration="1203000" />
-      <workItem from="1673447490619" duration="9153000" />
+      <workItem from="1673447490619" duration="9545000" />
+      <workItem from="1673539096385" duration="3682000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/engine/CMS.php</url>
-          <line>38</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -4,6 +4,8 @@
 namespace engine\core\database;
 
 use \PDO;
+use engine\core\config\Config;
+
 
 // класс для соединения и работы с БД
 class Connection
@@ -20,13 +22,7 @@ class Connection
     private function connect(){
 
         //$config = require_once 'config.php';
-        $config = [
-            'host' => '127.0.0.1:3307',
-            'db_name' => 'yandex',
-            'username' => 'root',
-            'password' => 'root',
-            'charset' => 'utf8'
-        ];
+        $config = Config::file('database');
 
         $dsn = 'mysql:host=' . $config['host'] .';dbname=' . $config['db_name'] . ';charset=' . $config['charset'];
 

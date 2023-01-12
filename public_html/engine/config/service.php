@@ -6,6 +6,7 @@ return [
     engine\service\router\Provider::class,
     engine\service\view\Provider::class,
     engine\service\config\Provider::class,
+    engine\service\request\Provider::class,
 ];
 
 
