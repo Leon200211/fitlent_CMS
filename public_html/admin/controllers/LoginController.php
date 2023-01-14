@@ -6,6 +6,7 @@ namespace admin\controllers;
 use engine\Controller;
 use engine\DI\DI;
 use engine\core\authorization\Auth;
+use engine\core\database\QueryBuilder;
 
 // контроллер для входа в админку
 class LoginController extends Controller
@@ -39,9 +40,16 @@ class LoginController extends Controller
 
         $params = $this->request->post;
 
+        $queryBuilder = new QueryBuilder();
+        $sql = $queryBuilder
+            ->select()
+            ->from('user')
+            ->where('email', $params['email'])
+            ->where('password', md5($params['password']))
+            ->limit(1)
+            ->sql();
 
-        $query = $this->db->query("SELECT * FROM `user` WHERE email = '{$params['email']}' AND 
-                                    password = '" . md5($params['password']) . "' LIMIT 1");
+        $query = $this->db->query($sql, $queryBuilder->values);
 
 
         if(!empty($query)){
@@ -52,7 +60,12 @@ class LoginController extends Controller
 
                 $hash = md5($user['id'] . $user['email'] . $user['password'] . $this->auth->salt());
 
-                $this->db->execute("UPDATE user SET hash = '$hash' WHERE id = '{$user['id']}'");
+                $sql = $queryBuilder
+                    ->update('user')
+                    ->set(['hash' => $hash])
+                    ->where('id', $user['id'])
+                    ->sql();
+                $this->db->execute($sql, $queryBuilder->values);
 
                 $this->auth->login($hash);
 

@@ -33,18 +33,19 @@ class Connection
     }
 
 
-    public function execute($sql){
+    public function execute($sql, $values = []){
         $sth = $this->link->prepare($sql);
 
-        return $sth->execute();
+        return $sth->execute($values);
     }
 
 
-    public function query($sql){
+    public function query($sql, $values = []){
+
 
         $sth = $this->link->prepare($sql);
 
-        $sth->execute();
+        $sth->execute($values);
 
         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
