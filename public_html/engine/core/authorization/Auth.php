@@ -10,7 +10,7 @@ class Auth implements AuthInterface
 {
 
     protected $autorized = false;
-    protected $user;
+    protected $hashUser;
 
 
     // метод возвращает статус авторизации
@@ -20,19 +20,21 @@ class Auth implements AuthInterface
 
 
     // метод возвращает пользователя
-    public function user(){
-        return $this->user;
+    public function hashUser(){
+        return Cookie::get('auth_user');
     }
 
 
     // метод авторизации
     public function login($user){
+
         // устанавливаем куки
-        Cookie::set('auth.authorized', true);
-        Cookie::set('auth.user', $user);
+        Cookie::set('auth_authorized', true);
+        Cookie::set('auth_user', $user);
+
 
         $this->autorized = true;
-        $this->user = $user;
+        $this->hashUser = $user;
 
     }
 
@@ -40,11 +42,11 @@ class Auth implements AuthInterface
     // метод выхода
     public function logout(){
         // Удаляем куки
-        Cookie::delete('auth.authorized');
-        Cookie::delete('auth.user');
+        Cookie::delete('auth_authorized');
+        Cookie::delete('auth_user');
 
         $this->autorized = false;
-        $this->user = null;
+        $this->hashUser = null;
     }
 
 

@@ -10,7 +10,7 @@ class Cookie
 
     // метод создание куки
     public static function set($key, $value, $time = 31536000){
-        setcookie($key, $value, time(), $time, '/');
+        setcookie($key, $value, time() + $time, '/');
     }
 
 

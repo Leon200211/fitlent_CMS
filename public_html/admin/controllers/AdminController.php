@@ -13,18 +13,36 @@ class AdminController extends Controller
     protected $auth;
 
 
-    public function __construct($di)
-    {
+    public function __construct($di) {
         parent::__construct($di);
 
         $this->auth = new Auth();
+        $this->checkAuthorization();
 
-        if(!$this->auth->isAutorized() and $this->request->server['REQUEST_URI'] !== '/admin/login/'){
-            //редирект
-            header('Location: /admin/login/', true, 301);
+
+        // разлогиниваемся
+        if (isset($this->request->get['logout'])) {
+            $this->auth->logout();
         }
 
     }
+
+
+    public function checkAuthorization(){
+
+        // авторизация из куки
+        if($this->auth->hashUser() !== NULL){
+            $this->auth->login($this->auth->hashUser());
+        }
+
+        if(!$this->auth->isAutorized()){
+            //редирект
+            header('Location: /admin/login/', true, 301);
+            exit;
+        }
+
+    }
+
 
 }
 
