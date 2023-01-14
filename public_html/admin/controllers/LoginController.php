@@ -22,11 +22,7 @@ class LoginController extends Controller
 
         // авторизация из куки
         if($this->auth->hashUser() !== NULL){
-            $this->auth->login($this->auth->hashUser());
-        }
-        // проверка на авторизацию
-        if($this->auth->isAutorized()){
-            header('Location: /admin/', true, 301);
+            header('Location: /admin/');
             exit;
         }
 
@@ -60,7 +56,7 @@ class LoginController extends Controller
 
                 $this->auth->login($hash);
 
-                header('Location: /admin/login/', true, 301);
+                header('Location: /admin/login/');
 
 
             }

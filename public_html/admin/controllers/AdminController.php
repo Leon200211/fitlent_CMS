@@ -21,27 +21,27 @@ class AdminController extends Controller
 
 
         // разлогиниваемся
-        if (isset($this->request->get['logout'])) {
-            $this->auth->logout();
+        if($this->auth->hashUser() == NULL){
+            header('Location: /admin/login/');
         }
 
     }
 
 
+    // метод для проверки авторизации
     public function checkAuthorization(){
 
-        // авторизация из куки
-        if($this->auth->hashUser() !== NULL){
-            $this->auth->login($this->auth->hashUser());
-        }
-
-        if(!$this->auth->isAutorized()){
-            //редирект
-            header('Location: /admin/login/', true, 301);
-            exit;
-        }
 
     }
+
+
+
+    public function logout(){
+        $this->auth->unAuthorize();
+        header('Location: /admin/login/');
+        exit;
+    }
+
 
 
 }

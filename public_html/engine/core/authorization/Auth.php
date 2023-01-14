@@ -32,21 +32,15 @@ class Auth implements AuthInterface
         Cookie::set('auth_authorized', true);
         Cookie::set('auth_user', $user);
 
-
-        $this->autorized = true;
-        $this->hashUser = $user;
-
     }
 
 
     // метод выхода
-    public function logout(){
+    public function unAuthorize(){
         // Удаляем куки
         Cookie::delete('auth_authorized');
         Cookie::delete('auth_user');
 
-        $this->autorized = false;
-        $this->hashUser = null;
     }
 
 
