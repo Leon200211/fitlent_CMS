@@ -7,6 +7,7 @@ return [
     engine\service\view\Provider::class,
     engine\service\config\Provider::class,
     engine\service\request\Provider::class,
+    engine\service\load\Provider::class,
 ];
 
 
