@@ -1,33 +1,35 @@
-<?php
-$this->theme->header();
-?>
+<?php $this->theme->header(); ?>
 
-<main>
-    <div class="container">
-        <div class="col-9">
-            <h1>Create page</h1>
-
-            <form>
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col page-title">
+                    <h3>Create page</h3>
                 </div>
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Content</label>
-                    <textarea type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-9">
+                    <form id="formPage">
+                        <div class="form-group">
+                            <label for="formTitle">Title</label>
+                            <input type="text" name="title" class="form-control" id="formTitle" placeholder="Title page...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formContent">Content</label>
+                            <textarea name="content" id="redactor" class="form-control" id="formContent"></textarea>
+                        </div>
+                    </form>
                 </div>
-            </form>
+                <div class="col-3">
+                    <div>
+                        <p>Publish this page</p>
+                        <button type="submit" class="btn btn-primary" onclick="page.add()">
+                            Publish
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
+    </main>
 
-
-        <div class="col-3">
-            <button type="submit" class="btn btn-primary">Publish</button>
-        </div>
-
-
-    </div>
-</main>
-
-<?php
-$this->theme->footer();
-?>
+<?php $this->theme->footer(); ?>

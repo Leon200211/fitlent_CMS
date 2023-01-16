@@ -3,3 +3,8 @@
     text-align: right;
 }
 
+.page-title{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.page-title h3{}

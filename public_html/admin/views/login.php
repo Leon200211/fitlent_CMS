@@ -16,9 +16,6 @@
     <!-- Custom styles for this template -->
     <link href="/admin/assets/css/login.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="/admin/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -30,7 +27,7 @@
 
 <div class="container">
 
-    <form class="form-signin" role="form" method="post" action="/admin/auth/">
+    <form class="form-signin" role="form" method="POST" action="/admin/auth/">
         <h2 class="form-signin-heading">Login to CMS</h2>
         <input type="email" name="email" class="form-control" placeholder="Email" required autofocus>
         <input type="password" name="password" class="form-control" placeholder="Password" required>

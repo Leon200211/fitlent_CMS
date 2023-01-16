@@ -1,40 +1,35 @@
-<?php
-$this->theme->header();
-?>
+<?php $this->theme->header(); ?>
 
-<main>
-    <div class="container">
-        <h1>Pages <a href="/admin/pages/create/">Create page</a></h1>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col page-title">
+                    <h3>
+                        Pages
+                        <a href="/admin/pages/create/">Create page</a>
+                    </h3>
+                </div>
+            </div>
 
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col">Date</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-            </tr>
-            </tbody>
-        </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach($pages as $page): ?>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><?= $page['title'] ?></td>
+                        <td>Otto</td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
-    </div>
-</main>
-
-<?php
-$this->theme->footer();
-?>
+<?php $this->theme->footer(); ?>
