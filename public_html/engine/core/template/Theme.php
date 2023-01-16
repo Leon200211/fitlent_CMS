@@ -80,7 +80,12 @@ class Theme
     // метод для загрузки файлов шаблонов
     private function loadTemplateFile($nameFile, $data = []){
 
+        // нужно исправить
         $templateFile = ROOT_DIR . '/content/themes/default/' . $nameFile . '.php';
+        if(ENV == 'admin'){
+            $templateFile = ROOT_DIR . '/views/' . $nameFile . '.php';
+        }
+
 
         if(is_file($templateFile)){
             extract($data);
