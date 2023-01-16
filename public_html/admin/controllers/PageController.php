@@ -40,8 +40,32 @@ class PageController extends AdminController
 
         if(isset($params['title'])){
             $pageId = $pageModel->repository->createPage($params);
+            echo $pageId;
+        }
 
-            var_dump($pageId);
+    }
+
+
+    // метод вывода страницы редактирования
+    public function edit($id){
+
+        $pageModel = $this->load->model('Page');
+        $this->data['page'] = $pageModel->repository->getPageData($id);
+        $this->view->render('pages/edit', $this->data);
+
+
+    }
+
+
+    // метод изменение информации на странице
+    public function update(){
+
+        $params = $this->request->post;
+        $pageModel = $this->load->model('Page');
+
+        if(isset($params['title'])){
+            $pageId = $pageModel->repository->updatePage($params);
+            echo $pageId;
         }
 
     }

@@ -23,7 +23,11 @@
                 <?php foreach($pages as $page): ?>
                     <tr>
                         <th scope="row"><?= $page['id'] ?></th>
-                        <td><?= $page['title'] ?></td>
+                        <td>
+                            <a href="/admin/page/edit/<?= $page['id'] ?>">
+                                <?= $page['title'] ?>
+                            </a>
+                        </td>
                         <td><?= $page['content'] ?></td>
                     </tr>
                 <?php endforeach; ?>

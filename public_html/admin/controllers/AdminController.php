@@ -12,6 +12,8 @@ class AdminController extends Controller
 
     protected $auth;
 
+    public $data = [];
+
 
     public function __construct($di) {
         parent::__construct($di);
