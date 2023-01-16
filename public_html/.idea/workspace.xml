@@ -11,6 +11,7 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="fitlent.cms" id="52968845-6987-4aab-be0b-e65e8f89550f" name="fitlent.cms" />
@@ -70,7 +71,7 @@
       <workItem from="1673796539312" duration="1049000" />
       <workItem from="1673797676450" duration="1286000" />
       <workItem from="1673799140811" duration="409000" />
-      <workItem from="1673872238996" duration="10798000" />
+      <workItem from="1673872238996" duration="14284000" />
     </task>
     <servers />
   </component>

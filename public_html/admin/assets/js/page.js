@@ -18,7 +18,8 @@ var page = {
 
             },
             success: function(result){
-                console.log(result);
+                window.location = '/admin/page/edit/' + result;
+                //console.log(result);
             }
         });
     },

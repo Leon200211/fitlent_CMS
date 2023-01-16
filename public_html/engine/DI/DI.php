@@ -46,4 +46,18 @@ class DI
     }
 
 
+    // метод для добавления значения в уже существующий ключ
+    public function push($key, $element = []){
+
+        if($this->has($key) !== null){
+            $this->set($key, []);
+        }
+
+        if(!empty($element)){
+            $this->container[$key][$element['key']] = $element['value'];
+        }
+
+    }
+
+
 }
