@@ -23,4 +23,17 @@ class PageRepository extends Model
     }
 
 
+    // метод создание новой страницы
+    public function createPage($params){
+
+        $page = new Page;
+        $page->setTitle(addslashes($params['title']));
+        $page->setContent(addslashes($params['content']));
+        $pageId = $page->save();
+
+        return $pageId;
+
+    }
+
+
 }

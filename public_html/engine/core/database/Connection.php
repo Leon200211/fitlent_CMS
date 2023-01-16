@@ -56,4 +56,9 @@ class Connection
     }
 
 
+    // метод для возврата id последней добавленной записи
+    public function lastInsertId(){
+        return $this->link->lastInsertId();
+    }
+
 }

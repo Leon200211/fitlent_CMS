@@ -16,3 +16,6 @@ $this->router->add('pages', '/admin/pages/', 'PageController:listing');
 $this->router->add('page-create', '/admin/pages/create/', 'PageController:create');
 
 
+$this->router->add('page-add', '/admin/page/add/', 'PageController:add', 'POST');
+
+

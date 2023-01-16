@@ -22,9 +22,9 @@
                 <tbody>
                 <?php foreach($pages as $page): ?>
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row"><?= $page['id'] ?></th>
                         <td><?= $page['title'] ?></td>
-                        <td>Otto</td>
+                        <td><?= $page['content'] ?></td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
