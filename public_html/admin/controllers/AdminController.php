@@ -25,7 +25,12 @@ class AdminController extends Controller
         // разлогиниваемся
         if($this->auth->hashUser() == NULL){
             header('Location: /admin/login/');
+            exit;
         }
+
+
+        // подгрузка языка
+        $this->load->language('dashboard/menu');
 
     }
 

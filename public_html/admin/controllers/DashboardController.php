@@ -13,6 +13,8 @@ class DashboardController extends AdminController
 
         $userModel = $this->load->model('User');
 
+        $this->load->language('dashboard/main');
+
         $this->view->render('dashboard');
 
     }

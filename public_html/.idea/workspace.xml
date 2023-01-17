@@ -38,17 +38,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/views/posts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/language/russian" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\language\russian" />
+      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\language\english\dashboard" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\views\posts" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\models\post" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\assets\css" />
-      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\assets\js" />
-      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\models\page" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\assets" />
@@ -78,7 +78,7 @@
       <workItem from="1673797676450" duration="1286000" />
       <workItem from="1673799140811" duration="409000" />
       <workItem from="1673872238996" duration="14626000" />
-      <workItem from="1673937870527" duration="4119000" />
+      <workItem from="1673937870527" duration="7644000" />
     </task>
     <servers />
   </component>

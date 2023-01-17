@@ -4,15 +4,18 @@
 namespace engine\core\template;
 
 use engine\core\template\Theme;
+use engine\DI\DI;
 
 // класс для работы с шаблонами
 class View
 {
 
+    public $di;
     protected $theme;
 
 
-    public function __construct(){
+    public function __construct(DI $di){
+        $this->di = $di;
         $this->theme = new Theme();
     }
 
@@ -31,6 +34,7 @@ class View
         }
 
 
+        $vars['lang'] = $this->di->get('language');
         $this->theme->setData($vars);
 
         // создание переменных из массива

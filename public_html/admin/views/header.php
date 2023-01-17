@@ -10,16 +10,16 @@
     <title>Админ-панель</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/admin/Assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/admin/assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/admin/Assets/css/dashboard.css" rel="stylesheet">
+    <link href="/admin/assets/css/dashboard.css" rel="stylesheet">
 
     <!-- simplelineicons for this template -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 
     <!-- Redactor CSS -->
-    <link rel="stylesheet" href="/admin/Assets/js/plugins/redactor/redactor.css">
+    <link rel="stylesheet" href="/admin/assets/js/plugins/redactor/redactor.css">
 </head>
 
 <body>
@@ -34,22 +34,26 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">
-                            <i class="icon-speedometer icons"></i> Home
+                            <i class="icon-speedometer icons"></i>
+                            <?= $lang->dashboardMenu['home'] ?>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/pages/">
-                            <i class="icon-doc icons"></i> Pages
+                            <i class="icon-doc icons"></i>
+                            <?= $lang->dashboardMenu['pages'] ?>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/posts/">
-                            <i class="icon-pencil icons"></i> Posts
+                            <i class="icon-pencil icons"></i>
+                            <?= $lang->dashboardMenu['posts'] ?>
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link">
-                            <i class="icon-equalizer icons"></i> Settings
+                        <a class="nav-link" href="/admin/settings/general/">
+                            <i class="icon-equalizer icons"></i>
+                            <?= $lang->dashboardMenu['settings'] ?>
                         </a>
                     </li>
                 </ul>

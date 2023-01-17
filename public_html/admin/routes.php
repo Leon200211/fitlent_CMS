@@ -31,6 +31,10 @@ $this->router->add('post-add', '/admin/post/add/', 'PostController:add', 'POST')
 $this->router->add('post-update', '/admin/post/update/', 'PostController:update', 'POST');
 
 
+// Настройки
+$this->router->add('settings-general', '/admin/settings/general/', 'SettingsController:general');
+
+
 
 
 

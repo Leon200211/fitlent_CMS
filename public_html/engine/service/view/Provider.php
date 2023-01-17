@@ -15,7 +15,7 @@ class Provider extends AbstractProvider
 
     public function init()
     {
-        $view = new View();
+        $view = new View($this->di);
 
         $this->di->set($this->serviceName, $view);
     }
