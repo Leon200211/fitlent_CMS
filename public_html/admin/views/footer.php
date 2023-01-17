@@ -7,5 +7,6 @@
 <script src="/admin/assets/js/plugins/redactor/redactor.min.js"></script>
 <script src="/admin/assets/js/init.js"></script>
 <script src="/admin/assets/js/page.js"></script>
+<script src="/admin/assets/js/post.js"></script>
 </body>
 </html>

@@ -11,7 +11,13 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="PhpServers">
     <servers>
       <server host="fitlent.cms" id="52968845-6987-4aab-be0b-e65e8f89550f" name="fitlent.cms" />
@@ -32,17 +38,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/assets/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/views/posts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\views\posts" />
+      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\models\post" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\assets\css" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\assets\js" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\models\page" />
-      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\engine\service\load" />
-      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\engine\service\request" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\assets" />
@@ -71,7 +77,8 @@
       <workItem from="1673796539312" duration="1049000" />
       <workItem from="1673797676450" duration="1286000" />
       <workItem from="1673799140811" duration="409000" />
-      <workItem from="1673872238996" duration="14284000" />
+      <workItem from="1673872238996" duration="14626000" />
+      <workItem from="1673937870527" duration="4119000" />
     </task>
     <servers />
   </component>
