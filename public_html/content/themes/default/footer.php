@@ -35,18 +35,7 @@
     </div>
 </footer>
 
-<!-- jQuery -->
-<script src="<?= \engine\core\template\Theme::getUrl() ?>/vendor/jquery/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="<?= \engine\core\template\Theme::getUrl() ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Contact Form JavaScript -->
-<script src="<?= \engine\core\template\Theme::getUrl() ?>/js/jqBootstrapValidation.js"></script>
-<script src="<?= \engine\core\template\Theme::getUrl() ?>/js/contact_me.js"></script>
-
-<!-- Theme JavaScript -->
-<script src="<?= \engine\core\template\Theme::getUrl() ?>/js/clean-blog.min.js"></script>
+<?php \engine\core\template\Asset::render('js'); ?>
 
 </body>
 
