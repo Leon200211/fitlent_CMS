@@ -8,5 +8,6 @@
 <script src="/admin/assets/js/init.js"></script>
 <script src="/admin/assets/js/page.js"></script>
 <script src="/admin/assets/js/post.js"></script>
+<script src="/admin/assets/js/setting.js"></script>
 </body>
 </html>

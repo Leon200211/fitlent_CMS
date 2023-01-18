@@ -33,6 +33,7 @@ $this->router->add('post-update', '/admin/post/update/', 'PostController:update'
 
 // Настройки
 $this->router->add('settings-general', '/admin/settings/general/', 'SettingsController:general');
+$this->router->add('settings-update', '/admin/settings/update/', 'SettingsController:updateSetting', 'POST');
 
 
 

@@ -68,7 +68,7 @@ class View
             return ROOT_DIR . '/content/themes/default/' . $template . '.php';
         }
 
-        return ROOT_DIR . '/views/' . $template . '.php';
+        return path('view') . '/' . $template . '.php';
 
     }
 

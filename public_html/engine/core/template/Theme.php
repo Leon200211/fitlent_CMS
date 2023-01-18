@@ -8,112 +8,96 @@ namespace engine\core\template;
 class Theme
 {
 
+    /**
+     * Rules template name
+     */
     const RULES_NAME_FILE = [
-        'header' => 'header-%s',
-        'footer' => 'footer-%s',
+        'header'  => 'header-%s',
+        'footer'  => 'footer-%s',
         'sidebar' => 'sidebar-%s',
     ];
 
-    public $url = '';
-    protected $data = [];
-
-
-
-    // метод для работы с хедером страницы
-    public function header($name = ''){
-        $name = (string) $name;
-        $file = 'header';
-
-        // подставляем переменную в нашу константу
-        if($name !== ''){
-            $file = sprintf(self::RULES_NAME_FILE['header'], $name);
-        }
-
-        $this->loadTemplateFile($file);
-    }
-
-
-    public function footer($name = ''){
-        $name = (string) $name;
-        $file = 'footer';
-
-        // подставляем переменную в нашу константу
-        if($name !== ''){
-            $file = sprintf(self::RULES_NAME_FILE['footer'], $name);
-        }
-
-        $this->loadTemplateFile($file);
-    }
-
-
-    public function sidebar($name = ''){
-        $name = (string) $name;
-        $file = 'sidebar';
-
-        // подставляем переменную в нашу константу
-        if($name !== ''){
-            $file = sprintf(self::RULES_NAME_FILE['sidebar'], $name);
-        }
-
-        $this->loadTemplateFile($file);
-    }
-
-
-    public function block($name = '', $data = []){
-        $name = (string) $name;
-
-        // подставляем переменную в нашу константу
-        if($name !== ''){
-            $name = sprintf(self::RULES_NAME_FILE['sidebar'], $name);
-        }
-
-        $this->loadTemplateFile($name, $data);
-    }
-
-
+    /**
+     * Url current theme
+     * @type string
+     */
+    protected static $url = '';
 
     /**
-     * @param $nameFile
-     * @param array $data
-     * @throws \Exception
+     * @var array
      */
-    // метод для загрузки файлов шаблонов
-    private function loadTemplateFile($nameFile, $data = []){
+    protected static $data = [];
 
-        // нужно исправить
-        $templateFile = ROOT_DIR . '/content/themes/default/' . $nameFile . '.php';
-        if(ENV == 'admin'){
-            $templateFile = ROOT_DIR . '/views/' . $nameFile . '.php';
-        }
+    /**
+     * @param null $name
+     */
+    public static function header($name = null)
+    {
+        $name = (string) $name;
+        $file = self::detectNameFile($name, __FUNCTION__);
 
-
-        if(is_file($templateFile)){
-            extract(array_merge($data, $this->data));
-            require_once $templateFile;
-        }else{
-            throw new \Exception(
-                sprintf('View file %s does not exist!', $templateFile)
-            );
-        }
-
+        Component::load($file);
     }
 
+    /**
+     * @param string $name
+     */
+    public static function footer($name = '')
+    {
+        $name = (string) $name;
+        $file = self::detectNameFile($name, __FUNCTION__);
 
+        Component::load($file);
+    }
+
+    /**
+     * @param string $name
+     */
+    public static function sidebar($name = '')
+    {
+        $name = (string) $name;
+        $file = self::detectNameFile($name, __FUNCTION__);
+
+        Component::load($file);
+    }
+
+    /**
+     * @param string $name
+     * @param array $data
+     */
+    public static function block($name = '', $data = [])
+    {
+        $name = (string) $name;
+
+        if ($name !== '') {
+            Component::load($name, $data);
+        }
+    }
+
+    /**
+     * @param $name
+     * @param $function
+     * @return string
+     */
+    private static function detectNameFile($name, $function)
+    {
+        return empty(trim($name)) ? $function : sprintf(self::RULES_NAME_FILE[$function], $name);
+    }
 
     /**
      * @return array
      */
-    public function getData(): array
+    public static function getData()
     {
-        return $this->data;
+        return static::$data;
     }
 
     /**
      * @param array $data
      */
-    public function setData(array $data): void
+    public static function setData($data)
     {
-        $this->data = $data;
+        static::$data = $data;
     }
 
 
