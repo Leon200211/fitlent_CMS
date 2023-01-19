@@ -128,4 +128,13 @@ class Theme
     }
 
 
+    // метод для получения title для страницы
+    public static function title(){
+        $nameSite = Setting::get('name_site');
+        $description = Setting::get('description');
+
+        return $nameSite . ' | ' . $description;
+    }
+
+
 }

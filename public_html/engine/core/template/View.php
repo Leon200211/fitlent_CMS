@@ -12,11 +12,13 @@ class View
 
     public $di;
     protected $theme;
+    protected $setting;
 
 
     public function __construct(DI $di){
         $this->di = $di;
         $this->theme = new Theme();
+        $this->setting = new Setting($di);
     }
 
 
@@ -27,7 +29,9 @@ class View
      */
     public function render($template, $vars = []){
 
-        include_once $this->getThemePath() . '/function.php';
+        if(file_exists($this->getThemePath() . '/function.php')){
+            include_once $this->getThemePath() . '/function.php';
+        }
 
         $templatePath = $this->getTemplatePath($template, ENV);
 

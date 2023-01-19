@@ -37,4 +37,17 @@ class SettingRepository extends Model
     }
 
 
+    // метод для извлечение настроек из БД
+    public function getSettingsValue($keyField){
+        $sql = $this->queryBuilder->select('value')
+            ->from('setting')
+            ->where('key_field', $keyField)
+            ->sql();
+
+        $query = $this->db->query($sql, $this->queryBuilder->values);
+
+        return isset($query[0]) ? $query[0]['value'] : null;
+    }
+
+
 }
