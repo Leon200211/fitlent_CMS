@@ -9,10 +9,8 @@
             Appearance
         </a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Themes</a>
-            <a class="dropdown-item" href="/admin/settings/appearance/menus/">
-                Menus
-            </a>
+            <a class="dropdown-item" href="/admin/settings/appearance/themes/">Themes</a>
+            <a class="dropdown-item" href="/admin/settings/appearance/menus/">Menus</a>
         </div>
     </li>
 </ul>

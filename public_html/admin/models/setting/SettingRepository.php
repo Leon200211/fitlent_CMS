@@ -10,15 +10,17 @@ use engine\Model;
 class SettingRepository extends Model
 {
 
+    
     // метод для получения настроек
     public function getSettings()
     {
         $sql = $this->queryBuilder->select()
             ->from('setting')
+            ->where('section', 'general')
             ->orderBy('id', 'ASC')
             ->sql();
 
-        return $this->db->query($sql);
+        return $this->db->query($sql, $this->queryBuilder->values);
     }
 
 
@@ -47,6 +49,18 @@ class SettingRepository extends Model
         $query = $this->db->query($sql, $this->queryBuilder->values);
 
         return isset($query[0]) ? $query[0]['value'] : null;
+    }
+
+
+    // метод для обновления активации темы
+    public function updateActiveTheme($theme){
+        $sql = $this->queryBuilder
+            ->update('setting')
+            ->set(['value' => $theme])
+            ->where('key_field', 'active_theme')
+            ->sql();
+
+        $this->db->execute($sql, $this->queryBuilder->values);
     }
 
 

@@ -17,8 +17,6 @@ class MenuRepository extends Model
      */
     public function add($params = [])
     {
-        echo 123;
-
         if (empty($params)) {
             return 0;
         }

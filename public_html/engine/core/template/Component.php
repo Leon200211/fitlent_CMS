@@ -17,7 +17,7 @@ class Component
         $templateFile = ROOT_DIR . '/content/themes/default/' . $name . '.php';
 
         if (ENV == 'admin') {
-            $templateFile = path('view') . '/' . $name . '.php';
+            $templateFile = path('views') . '/' . $name . '.php';
         }
 
         if (is_file($templateFile)) {

@@ -11,7 +11,10 @@
 
     <title><?= Theme::title(); ?></title>
 
-    <?php Asset::render('css'); ?>
+    <?php
+    require_once 'function.php';
+    Asset::render('css');
+    ?>
 
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -45,7 +48,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <?php
-                foreach (Menu::getItems() as $item){
+                foreach (Menu::getItems(1) as $item){
                     ?>
                     <li>
                         <a href="<?= $item['link'] ?>"><?= $item['name'] ?></a>

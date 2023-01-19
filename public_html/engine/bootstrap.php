@@ -7,6 +7,7 @@ class_alias('engine\\core\\template\\Asset', 'Asset');
 class_alias('engine\\core\\template\\Theme', 'Theme');
 class_alias('engine\\core\\template\\Setting', 'Setting');
 class_alias('engine\\core\\template\\Menu', 'Menu');
+class_alias('engine\\core\\customize\\Customize', 'Customize');
 
 use engine\CMS;
 use engine\DI\DI;

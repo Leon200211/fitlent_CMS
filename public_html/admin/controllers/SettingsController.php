@@ -4,6 +4,7 @@
 namespace admin\controllers;
 
 
+use admin\models\setting\Setting;
 use cms\models\menuItem\MenuItemRepository;
 use engine\core\template\Theme;
 
@@ -123,6 +124,25 @@ class SettingsController extends AdminController
             $this->model->menuItem->update($params);
         }
 
+    }
+
+
+    // метод для рендера страницы тем
+    public function themes(){
+        $this->data['themes'] = getThemes();
+        $this->data['activeTheme'] = \Setting::get('active_theme');
+
+        $this->view->render('settings/themes', $this->data);
+    }
+
+
+    // метод для активации темы
+    public function activateTheme(){
+        $params = $this->request->post;
+
+        $this->load->model("Setting");
+
+        $this->model->setting->updateActiveTheme($params['theme']);
     }
 
 

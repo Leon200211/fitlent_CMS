@@ -8,6 +8,7 @@ return [
     engine\service\config\Provider::class,
     engine\service\request\Provider::class,
     engine\service\load\Provider::class,
+    engine\service\customize\Provider::class,
 ];
 
 
