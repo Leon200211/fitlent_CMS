@@ -16,7 +16,7 @@
                 <tr>
                     <th>#</th>
                     <th>Title</th>
-                    <th>Date</th>
+                    <th>Content</th>
                 </tr>
                 </thead>
                 <tbody>

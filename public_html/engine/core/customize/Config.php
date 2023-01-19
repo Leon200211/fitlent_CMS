@@ -23,6 +23,11 @@ class Config
             'urlPath' => '/admin/posts/',
             'title' => 'posts'
         ],
+        'plugins' => [
+            'classIcon' => 'icon-wrench icons',
+            'urlPath' => '/admin/plugins/',
+            'title' => 'Plugins'
+        ],
         'settings' => [
             'classIcon' => 'icon-equalizer icons',
             'urlPath' => '/admin/settings/general/',

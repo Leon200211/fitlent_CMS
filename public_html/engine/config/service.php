@@ -9,6 +9,7 @@ return [
     engine\service\request\Provider::class,
     engine\service\load\Provider::class,
     engine\service\customize\Provider::class,
+    engine\service\plugin\Provider::class,
 ];
 
 

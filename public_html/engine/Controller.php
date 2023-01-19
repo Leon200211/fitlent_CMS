@@ -18,6 +18,7 @@ abstract class Controller
     protected $config;
     protected $request;
     protected $load;
+    protected $plugin;
     //protected $model;
 
 
@@ -54,6 +55,22 @@ abstract class Controller
 
         return $this;
 
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRequest(): mixed
+    {
+        return $this->request;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPlugin()
+    {
+        return $this->plugin;
     }
 
 

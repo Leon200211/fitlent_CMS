@@ -46,3 +46,12 @@ $this->router->add('setting-update-menu-item', '/admin/settings/ajaxMenuUpdateIt
 $this->router->add('setting-update-theme', '/admin/settings/activateTheme/', 'SettingsController:activateTheme', 'POST');
 
 
+
+// Plugins Routes (GET)
+$this->router->add('list-plugins', '/admin/plugins/', 'PluginController:listPlugins');
+// Plugins Routes (POST)
+$this->router->add('install-plugin', '/admin/plugins/ajaxInstall/', 'PluginController:ajaxInstall', 'POST');
+$this->router->add('activate-plugin', '/admin/plugins/ajaxActivate/', 'PluginController:ajaxActivate', 'POST');
+
+
+

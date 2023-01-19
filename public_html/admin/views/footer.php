@@ -11,5 +11,6 @@
 <script src="/admin/assets/js/setting.js"></script>
 <script src="/admin/assets/js/menu.js"></script>
 <script src="/admin/assets/js/jquery-sortable.js"></script>
+<script src="/admin/assets/js/plugin.js"></script>
 </body>
 </html>

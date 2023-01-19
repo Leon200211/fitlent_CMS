@@ -10,7 +10,7 @@ use engine\Model;
 class SettingRepository extends Model
 {
 
-    
+
     // метод для получения настроек
     public function getSettings()
     {

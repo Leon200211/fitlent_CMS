@@ -38,17 +38,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/content/themes/default" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/engine/service/plugin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\engine\service\plugin" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\content\themes\default" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\content\themes\example-theme" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\engine\service\customize" />
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\assets\js" />
-      <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\views\settings" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\fitlent_CMS\public_html\admin\assets" />
@@ -80,11 +80,22 @@
       <workItem from="1673872238996" duration="14626000" />
       <workItem from="1673937870527" duration="8073000" />
       <workItem from="1674027385582" duration="10357000" />
-      <workItem from="1674114531647" duration="24569000" />
+      <workItem from="1674114531647" duration="29497000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/admin/controllers/PluginController.php</url>
+          <line>18</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

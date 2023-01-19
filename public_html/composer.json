@@ -5,9 +5,14 @@
             "engine\\": "engine",
             "engine\\DI\\": "engine/DI",
             "cms\\": "cms",
-            "admin\\": "admin"
+            "admin\\": "admin",
+            "plugin\\": "content/plugins"
         }
     },
+    "files": [
+        "engine/defines.php",
+        "engine/Function.php"
+    ],
     "authors": [
         {
             "name": "Leon200211",

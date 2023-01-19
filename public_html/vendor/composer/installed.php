@@ -3,7 +3,7 @@
         'name' => 'auser/public_html',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '90178c7076413980a310af3ec6221bbaa01f5f54',
+        'reference' => '30516a85d16fb9e3af5fc73cc80cf217a481c1cc',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'auser/public_html' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '90178c7076413980a310af3ec6221bbaa01f5f54',
+            'reference' => '30516a85d16fb9e3af5fc73cc80cf217a481c1cc',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

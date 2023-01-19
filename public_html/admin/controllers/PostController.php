@@ -51,7 +51,7 @@ class PostController extends AdminController
 
         $this->load->model('Post');
 
-        $this->data['page'] = $this->model->post->getPostData($id);
+        $this->data['post'] = $this->model->post->getPostData($id);
         $this->view->render('posts/edit', $this->data);
 
 
