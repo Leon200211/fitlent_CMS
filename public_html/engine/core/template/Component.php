@@ -22,7 +22,8 @@ class Component
 
         if (is_file($templateFile)) {
             extract(array_merge($data, Theme::getData()));
-            require_once $templateFile;
+            //require_once $templateFile;
+            require $templateFile;
         } else {
             throw new \Exception(
                 sprintf('View file %s does not exist!', $templateFile)

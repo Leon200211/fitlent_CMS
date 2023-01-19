@@ -33,9 +33,13 @@ $this->router->add('post-update', '/admin/post/update/', 'PostController:update'
 
 // Настройки
 $this->router->add('settings-general', '/admin/settings/general/', 'SettingsController:general');
+$this->router->add('settings-menus', '/admin/settings/appearance/menus/', 'SettingsController:menus');
+
+// Settings Routes (POST)
 $this->router->add('settings-update', '/admin/settings/update/', 'SettingsController:updateSetting', 'POST');
-
-
-
+$this->router->add('setting-add-menu', '/admin/settings/ajaxMenuAdd/', 'SettingsController:ajaxMenuAdd', 'POST');
+$this->router->add('setting-add-menu-item', '/admin/settings/ajaxMenuAddItem/', 'SettingsController:ajaxMenuAddItem', 'POST');
+$this->router->add('setting-sort-menu-item', '/admin/settings/ajaxMenuSortItems/', 'SettingsController:ajaxMenuSortItems', 'POST');
+$this->router->add('setting-remove-menu-item', '/admin/settings/ajaxMenuRemoveItem/', 'SettingsController:ajaxMenuRemoveItem', 'POST');
 
 

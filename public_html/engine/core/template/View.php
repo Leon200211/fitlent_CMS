@@ -3,6 +3,7 @@
 
 namespace engine\core\template;
 
+use cms\models\menuItem\MenuItem;
 use engine\core\template\Theme;
 use engine\DI\DI;
 
@@ -14,6 +15,7 @@ class View
     protected $theme;
     protected $setting;
     protected $menu;
+    protected $menuItem;
 
 
     public function __construct(DI $di){
@@ -21,6 +23,7 @@ class View
         $this->theme = new Theme();
         $this->setting = new Setting($di);
         $this->menu = new Menu($di);
+        $this->menuItem = new MenuItem($di);
     }
 
 

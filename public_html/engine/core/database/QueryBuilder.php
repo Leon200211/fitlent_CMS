@@ -161,6 +161,15 @@ class QueryBuilder
     }
 
 
+    // метод для удаления записи из БД
+    public function delete(){
+        $this->reset();
+        $this->sql['delete'] = 'DELETE ';
+
+        return $this;
+    }
+
+
     /**
      * Reset Builder
      */

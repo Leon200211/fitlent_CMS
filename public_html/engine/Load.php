@@ -25,37 +25,34 @@ class Load
     }
 
 
-    public function model($modelName, $modelDir = false){
-
-        $modelName = mb_strtolower($modelName);
-        $modelName = ucfirst($modelName);
-        $modelDir = $modelDir ?: $modelName;
-
+    /**
+     * @param $modelName
+     * @param bool $modelDir
+     * @param bool $env
+     * @return bool
+     */
+    public function model($modelName, $modelDir = false, $env = false)
+    {
+        $modelName  = ucfirst($modelName);
+        $modelDir   = $modelDir ? $modelDir : lcfirst($modelName);
+        $env        = $env ? $env : ENV;
 
         $namespaceModel = sprintf(
             self::MASK_MODEL_REPOSITORY,
-            ENV, $modelDir, $modelName
+            $env, $modelDir, $modelName
         );
 
-        $idClassModel = class_exists($namespaceModel);
+        $isClassModel = class_exists($namespaceModel);
 
-//        if(class_exists($idClassModel)){
-//            //$this->di->set($modelName, new $namespaceModel($this->di));
-//            $this->di->push('model', [
-//                'key' => mb_strtolower($modelName),
-//                'value' => new $namespaceModel($this->di)
-//            ]);
-//        }
-
-        if($idClassModel){
+        if ($isClassModel) {
+            // Set to DI
             $modelRegistry = $this->di->get('model') ?: new \stdClass();
-            $modelRegistry->{mb_strtolower($modelName)} = new $namespaceModel($this->di);
+            $modelRegistry->{lcfirst($modelName)} = new $namespaceModel($this->di);
 
             $this->di->set('model', $modelRegistry);
         }
 
-        return $idClassModel;
-
+        return $isClassModel;
     }
 
 

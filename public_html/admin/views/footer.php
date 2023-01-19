@@ -9,5 +9,7 @@
 <script src="/admin/assets/js/page.js"></script>
 <script src="/admin/assets/js/post.js"></script>
 <script src="/admin/assets/js/setting.js"></script>
+<script src="/admin/assets/js/menu.js"></script>
+<script src="/admin/assets/js/jquery-sortable.js"></script>
 </body>
 </html>
