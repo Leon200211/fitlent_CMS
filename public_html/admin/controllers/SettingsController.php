@@ -113,4 +113,17 @@ class SettingsController extends AdminController
     }
 
 
+    // метод обновления информации о элементах меню
+    public function ajaxMenuUpdateItem(){
+        $params = $this->request->post;
+
+        $this->load->model('MenuItem', false, 'cms');
+
+        if(isset($params['item_id']) and strlen($params['item_id']) > 0){
+            $this->model->menuItem->update($params);
+        }
+
+    }
+
+
 }

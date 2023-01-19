@@ -87,5 +87,39 @@ var menu = {
                 $('.menu-item-' + itemId).remove();
             }
         });
+    },
+
+
+    updateItem: function (itemId, field, element){
+
+        var formData = new FormData();
+
+        formData.append('item_id', itemId);
+        formData.append('field', field);
+        formData.append('value', $(element).val());
+
+        if(itemId < 1){
+            return false;
+        }
+
+        var _this = this;
+
+        $.ajax({
+            url: '/admin/settings/ajaxMenuUpdateItem/',
+            type: this.ajaxMethod,
+            data: formData,
+            processData: false,
+            contentType: false,
+            beforeSend: function (){
+
+            },
+            success: function (result) {
+                if(result){
+
+                }
+            }
+        });
+
     }
+
 };
