@@ -13,12 +13,14 @@ class View
     public $di;
     protected $theme;
     protected $setting;
+    protected $menu;
 
 
     public function __construct(DI $di){
         $this->di = $di;
         $this->theme = new Theme();
         $this->setting = new Setting($di);
+        $this->menu = new Menu($di);
     }
 
 
