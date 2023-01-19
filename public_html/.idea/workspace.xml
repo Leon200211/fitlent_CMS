@@ -80,22 +80,11 @@
       <workItem from="1673872238996" duration="14626000" />
       <workItem from="1673937870527" duration="8073000" />
       <workItem from="1674027385582" duration="10357000" />
-      <workItem from="1674114531647" duration="29497000" />
+      <workItem from="1674114531647" duration="30846000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/admin/controllers/PluginController.php</url>
-          <line>18</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

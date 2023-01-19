@@ -1,7 +1,29 @@
+
 body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #eee;
+}
+
+body .center.grid {
+  height: 100%;
+}
+
+.form.form-login {
+  min-width: 350px;
+  background: white;
+  padding: 2em 1.8em;
+  display: inline-block;
+  text-align: left;
+}
+
+.fexi-login-logo {
+  padding-bottom: 1.5em;
+}
+
+.fexi-login-logo img {
+  margin-right: 1em;
+  width: 10em!important;
 }
 
 .form-signin {
@@ -20,8 +42,8 @@ body {
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
 }

@@ -13,14 +13,21 @@ class Page
 
     use ActiveRecord;
 
-
     protected $table = 'pages';
 
     public $id;
-    public $title;
-    public $content;
-    public $date;
 
+    public $title;
+
+    public $content;
+
+    public $segment;
+
+    public $type;
+
+    public $status;
+
+    public $date;
 
     /**
      * @return mixed
@@ -33,7 +40,7 @@ class Page
     /**
      * @param mixed $id
      */
-    public function setId($id): void
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -49,7 +56,7 @@ class Page
     /**
      * @param mixed $title
      */
-    public function setTitle($title): void
+    public function setTitle($title)
     {
         $this->title = $title;
     }
@@ -65,7 +72,7 @@ class Page
     /**
      * @param mixed $content
      */
-    public function setContent($content): void
+    public function setContent($content)
     {
         $this->content = $content;
     }
@@ -81,9 +88,57 @@ class Page
     /**
      * @param mixed $date
      */
-    public function setDate($date): void
+    public function setDate($date)
     {
         $this->date = $date;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSegment()
+    {
+        return $this->segment;
+    }
+
+    /**
+     * @param mixed $segment
+     */
+    public function setSegment($segment)
+    {
+        $this->segment = $segment;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
     }
 
 
