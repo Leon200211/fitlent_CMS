@@ -15,7 +15,7 @@ class Plugin extends Service
     {
         $this->getLoad()->model('Plugin');
 
-        /** @var PluginRepository $pluginModel */
+
         $pluginModel = $this->getModel('plugin');
 
         if (!$pluginModel->isInstallPlugin($directory)) {
@@ -27,7 +27,7 @@ class Plugin extends Service
     {
         $this->getLoad()->model('Plugin');
 
-        /** @var PluginRepository $pluginModel */
+
         $pluginModel = $this->getModel('plugin');
         $pluginModel->activatePlugin($id, $active);
     }
@@ -39,7 +39,7 @@ class Plugin extends Service
     {
         $this->getLoad()->model('Plugin');
 
-        /** @var PluginRepository $pluginModel */
+
         $pluginModel = $this->getModel('plugin');
 
         return $pluginModel->getActivePlugins();

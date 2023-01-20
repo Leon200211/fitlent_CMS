@@ -8,7 +8,7 @@
                         <h2 class="ui header">
                             <?= $page['title'] ?>
                             <div class="sub header grey">
-                                <?php //echo $baseUrl . '/page/' . \Engine\Helper\Text::transliteration($page['title']) ?>
+                                <?= $baseUrl . '/page/' . \engine\helper\Text::transliteration($page['title']) ?>
                             </div>
                         </h2>
                     </div>

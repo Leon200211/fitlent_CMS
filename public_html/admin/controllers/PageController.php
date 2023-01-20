@@ -49,6 +49,7 @@ class PageController extends AdminController
 
         $this->load->model('Page');
 
+        $this->data['baseUrl'] = \engine\core\config\Config::item('baseUrl');
         $this->data['page'] = $this->model->page->getPageData($id);
         $this->view->render('pages/edit', $this->data);
 
