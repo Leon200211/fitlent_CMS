@@ -32,17 +32,17 @@ ORM используется для упрощения процесса сохр
 
 ### Админ панель
 
-#### Работа со страницами и постами
+### Работа со страницами и постами
 
 ![Безымянный](https://user-images.githubusercontent.com/91278041/213773031-fd589e6b-4aab-43ac-9d31-9819fad5af7a.png)
 
 ![image](https://user-images.githubusercontent.com/91278041/213773225-d1e4b350-67c2-44c9-9277-965a978e927d.png)
 
-#### Работа с плагинами
+### Работа с плагинами
 
 ![image](https://user-images.githubusercontent.com/91278041/213773299-bba3c751-9b1d-406d-b4ed-eddf94856095.png)
 
-#### Работа с настройками и шаблонами
+### Работа с настройками и шаблонами
 
 ![image](https://user-images.githubusercontent.com/91278041/213773380-a94df66d-2bd3-4b96-ac19-cb16306da7c6.png)
 
