@@ -46,8 +46,11 @@ ORM используется для упрощения процесса сохр
 
 ![image](https://user-images.githubusercontent.com/91278041/213773380-a94df66d-2bd3-4b96-ac19-cb16306da7c6.png)
 
-### *Работа меню и шаблонами
+### Работа меню и шаблонами
 
+![image](https://user-images.githubusercontent.com/91278041/213774435-f397a6d0-f9b5-4ee7-ac1c-3edb51d7f383.png)
+![image](https://user-images.githubusercontent.com/91278041/213777738-68fb5f21-0b6c-47bc-9db9-0f1cd9125550.png)
+![Безымянный](https://user-images.githubusercontent.com/91278041/213777967-5f054f8f-82d7-4c6e-aa8d-29d3c411715c.png)
 
 
 ### Вывод пользователю
