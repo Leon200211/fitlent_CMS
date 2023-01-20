@@ -35,6 +35,7 @@ ORM используется для упрощения процесса сохр
 #### Работа со страницами и постами
 
 ![Безымянный](https://user-images.githubusercontent.com/91278041/213773031-fd589e6b-4aab-43ac-9d31-9819fad5af7a.png)
+
 ![image](https://user-images.githubusercontent.com/91278041/213773225-d1e4b350-67c2-44c9-9277-965a978e927d.png)
 
 #### Работа с плагинами
